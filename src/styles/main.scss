@@ -1,6 +1,5 @@
-
 //
-$base-text: #dfdfdf;
+$base-text: #fff;
 $white: #f7f7f7;
 
 * {
@@ -9,27 +8,26 @@ $white: #f7f7f7;
 
 body {
   color: $base-text;
-  background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+  background: url('./../assets/images/geometry2.png') repeat;
 }
 
 section {
-  min-height: 800px;
-  &.intro {
+  min-height: 400px;
+  color: #333;
+  &.header {
     min-height: 100vh;
+    background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
     .jumbotron {
+      color: $base-text;
       background-color: transparent;
     }
   }
 }
 
-.jumbotron {
-  margin-top: 100px;
-}
-
 .hero-image {
   position: absolute;
   top: 250px;
-  z-index: -1000;
+  z-index: 0;
   width: 100%;
   min-height: 100%;
   background-size: cover;
@@ -47,6 +45,11 @@ footer {
 .btn-default {
   color: $white;
   background-color: transparent;
+  transition: background .4s ease;
+
+  &:hover {
+    background-color: $white;
+  }
 }
 
 .card {
@@ -56,6 +59,24 @@ footer {
   margin-bottom: 30px;
   color: #333;
   text-align: justify;
-  background-color: $white;
+  background-color: rgba(#fff, .75);
+  border: 1px solid #383737;
+}
+
+.paper {
+  padding: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: justify;
+  background-color: #fff;
+}
+
+
+.screen-image {
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: justify;
+  background-color: rgba(#fff, .75);
   border: 1px solid #383737;
 }
