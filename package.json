@@ -11,7 +11,9 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.3",
-    "gulp-minify-css": "^1.2.4"
+    "gulp-minify-css": "^1.2.4",
+    "jquery": "^2.2.4",
+    "jquery-smooth-scroll": "^1.7.2"
   },
   "devDependencies": {
     "browser-sync": "^2.12.8",
