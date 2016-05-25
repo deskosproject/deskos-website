@@ -11,5 +11,6 @@ Install gulp client:
 
 Run in develop:
   ```sh
+  $ npm install
   $ gulp
   ```
