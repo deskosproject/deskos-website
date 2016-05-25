@@ -1,4 +1,4 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var handlebars = require('gulp-handlebars');
 var hb = require('gulp-hb');
