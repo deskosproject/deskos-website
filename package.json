@@ -17,6 +17,7 @@
     "gulp": "^3.9.1",
     "gulp-handlebars": "^4.0.0",
     "gulp-hb": "^5.1.0",
+    "gulp-imagemin": "^3.0.1",
     "gulp-sass": "^2.3.1"
   }
 }
