@@ -3,12 +3,29 @@
 $white: #f7f7f7;
 
 body {
-  height: 100vh;
-  background-color: $white;
+  background-color: transparent;
+}
+
+section {
+  min-height: 100vh;
+  &.intro {
+    .jumbotron {
+      margin-top: 250px;
+    }
+  }
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+  width: 100%;
+  min-height: 100%;
+  background: url('http://placehold.it/1920x1080') no-repeat center center;
+  background-size: cover;
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
