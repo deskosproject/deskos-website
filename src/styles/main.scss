@@ -1,7 +1,17 @@
-@import './../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 //
 $white: #f7f7f7;
 
 body {
+  height: 100vh;
   background-color: $white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: $white;
+  background-color: #333;
 }
