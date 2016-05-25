@@ -1,4 +1,5 @@
 @import url('./bootstrap.min.css');
+@import url('./font-awesome.min.css');
 
 $base-text: #fff;
 $white: #f7f7f7;
@@ -9,7 +10,7 @@ $white: #f7f7f7;
 
 body {
   color: $base-text;
-  background: url('./../assets/images/geometry2.png') repeat;
+  background: url('./../images/geometry2.png') repeat;
 }
 
 section {
@@ -22,6 +23,12 @@ section {
       color: $base-text;
       background-color: transparent;
     }
+  }
+}
+
+#intro {
+  p {
+    font-size: 1.5em;
   }
 }
 
@@ -75,9 +82,8 @@ footer {
 
 
 .screen-image {
-  padding: 20px;
+  padding: 5px;
   margin-bottom: 30px;
   text-align: justify;
   background-color: rgba(#fff, .75);
-  border: 1px solid #383737;
 }
