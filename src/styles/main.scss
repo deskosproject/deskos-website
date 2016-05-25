@@ -15,6 +15,7 @@ body {
 
 section {
   min-height: 400px;
+  margin-bottom: 100px;
   color: #333;
   &.header {
     min-height: 100vh;
@@ -26,7 +27,7 @@ section {
   }
 }
 
-#intro {
+#intro, #outro {
   p {
     font-size: 1.5em;
   }
@@ -86,4 +87,8 @@ footer {
   margin-bottom: 30px;
   text-align: justify;
   background-color: rgba(#fff, .75);
+}
+
+h2 {
+  font-weight: bold;
 }
