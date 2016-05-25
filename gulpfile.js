@@ -5,9 +5,16 @@ var hb = require('gulp-hb');
 var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 
-// html
+// Html
 gulp.task('html', function() {
   return gulp.src('./src/*.html')
+  .pipe(browserSync.stream());
+})
+
+// Scripts
+gulp.task('scripts', function() {
+  return gulp.src('./src/scripts/*.js')
+  .pipe(gulp.dest('./dist'))
   .pipe(browserSync.stream());
 })
 
@@ -40,15 +47,16 @@ gulp.task('images', function() {
 });
 
 // Static server
-gulp.task('serve', ['html', 'styles', 'hbs', 'images'], function() {
+gulp.task('serve', ['html', 'scripts', 'styles', 'hbs', 'images'], function() {
   browserSync.init({
     server: {
       baseDir: "./dist"
     }
   });
   gulp.watch('./src/*.html', ['html']).on('change', browserSync.reload);
-  gulp.watch('./src/templates/*.hbs', ['hbs']).on('change', browserSync.reload);
   gulp.watch('./src/styles/*.scss', ['styles']).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/*.js', ['scripts']).on('change', browserSync.reload);
+  gulp.watch('./src/templates/*.hbs', ['hbs']).on('change', browserSync.reload);
   gulp.watch('./src/assets/images/*', ['images']).on('change', browserSync.reload);
 });
 
