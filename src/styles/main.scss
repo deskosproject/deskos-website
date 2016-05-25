@@ -1,27 +1,37 @@
 
 //
+$base-text: #dfdfdf;
 $white: #f7f7f7;
 
+* {
+  border-radius: 0 !important;
+}
+
 body {
-  background-color: transparent;
+  color: $base-text;
+  background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
 }
 
 section {
-  min-height: 100vh;
+  min-height: 800px;
   &.intro {
+    min-height: 100vh;
     .jumbotron {
-      margin-top: 250px;
+      background-color: transparent;
     }
   }
 }
 
+.jumbotron {
+  margin-top: 100px;
+}
+
 .hero-image {
   position: absolute;
-  top: 0;
+  top: 250px;
   z-index: -1000;
   width: 100%;
   min-height: 100%;
-  background: url('http://placehold.it/1920x1080') no-repeat center center;
   background-size: cover;
 }
 
@@ -31,4 +41,21 @@ footer {
   padding: 10px 0;
   color: $white;
   background-color: #333;
+}
+
+
+.btn-default {
+  color: $white;
+  background-color: transparent;
+}
+
+.card {
+  height: 290px;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: justify;
+  background-color: $white;
+  border: 1px solid #383737;
 }

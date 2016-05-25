@@ -5,6 +5,12 @@ var hb = require('gulp-hb');
 var sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 
+// html
+gulp.task('html', function() {
+  return gulp.src('./src/*.html')
+  .pipe(browserSync.stream());
+})
+
 // Styles
 gulp.task('styles', function() {
   return gulp.src('./src/styles/main.scss')
@@ -34,12 +40,13 @@ gulp.task('images', function() {
 });
 
 // Static server
-gulp.task('serve', ['styles', 'hbs', 'images'], function() {
+gulp.task('serve', ['html', 'styles', 'hbs', 'images'], function() {
   browserSync.init({
     server: {
       baseDir: "./dist"
     }
   });
+  gulp.watch('./src/*.html', ['html']).on('change', browserSync.reload);
   gulp.watch('./src/templates/*.hbs', ['hbs']).on('change', browserSync.reload);
   gulp.watch('./src/styles/*.scss', ['styles']).on('change', browserSync.reload);
   gulp.watch('./src/assets/images/*', ['images']).on('change', browserSync.reload);
