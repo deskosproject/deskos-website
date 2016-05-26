@@ -8,6 +8,7 @@ const imagemin = require('gulp-imagemin');
 // Html
 gulp.task('html', function() {
   return gulp.src('./src/*.html')
+  .pipe(gulp.dest('./dist'))
   .pipe(browserSync.stream());
 })
 
