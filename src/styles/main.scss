@@ -23,6 +23,7 @@ section {
   color: #333;
   &.header {
     min-height: 100vh;
+    padding-top: 10%;
     // background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
     background-image: linear-gradient(225deg, #70f6ea 0%,#51ccdc 100%);
     &::before {
@@ -53,11 +54,8 @@ section {
 }
 
 .hero-image {
-  position: absolute;
   top: 250px;
   z-index: 0;
-  width: 100%;
-  background-size: cover;
   animation: fadeIn 1s ease, up 1s ease;
 }
 
@@ -88,10 +86,11 @@ footer {
 }
 
 .card {
-  height: 290px;
-  padding: 20px;
+  height: 400px;
+  padding: 25px;
   padding-bottom: 10px;
   margin-bottom: 30px;
+  font-size: 1.3em;
   color: #333;
   text-align: justify;
   background-color: rgba(#fff, .75);
