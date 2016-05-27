@@ -4,7 +4,8 @@
 @import url('./font-awesome.min.css');
 @import url('./jquery.fancybox.css');
 
-$base-text: #fff;
+$primary: #51ccdc;
+$base-text: #444;
 $white: #fff;
 
 * {
@@ -20,7 +21,7 @@ body {
 section {
   min-height: 400px;
   margin-bottom: 100px;
-  color: #333;
+  color: $base-text;
   &.header {
     min-height: 100vh;
     padding-top: 10%;
@@ -36,7 +37,7 @@ section {
       background: url('./../images/texture-shapes-bg.png');
     }
     .jumbotron {
-      color: $base-text;
+      color: $white;
       background-color: transparent;
       animation: fadeIn 1.5s ease, drop 1.5s ease;
       h1 {
@@ -65,7 +66,11 @@ footer {
   width: 100%;
   padding: 10px 0;
   color: $white;
-  background-color: #333;
+  background-color: #444;
+}
+
+.page-header {
+  border-bottom: 1px solid transparent;
 }
 
 
@@ -91,19 +96,23 @@ footer {
   padding-bottom: 10px;
   margin-bottom: 30px;
   font-size: 1.3em;
-  color: #333;
+  color: $base-text;
   text-align: justify;
-  background-color: rgba(#fff, .75);
-  border: 1px solid #383737;
+  background-color: rgba($white, .75);
+  border: 1px solid $primary;
+
+  i {
+    color: $primary;
+  }
 }
 
 .paper {
   padding: 50px;
   padding-bottom: 10px;
   margin-bottom: 30px;
-  color: #333;
+  color: $base-text;
   text-align: justify;
-  background-color: #fff;
+  background-color: $white;
 }
 
 
