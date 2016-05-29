@@ -48,7 +48,7 @@ gulp.task('hbs', function() {
 
 // Images
 gulp.task('images', function() {
-  gulp.src(['./src/assets/images/*'])
+  gulp.src(['./src/assets/images/*/*.{png,jpg}'])
   .pipe(imagemin())
   .pipe(gulp.dest('./dist/assets/images'))
   .pipe(browserSync.stream());
