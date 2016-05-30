@@ -1,0 +1,46 @@
+@import './colors.scss';
+@import './animations.scss';
+
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  font-family: 'Raleway', Verdana, Arial, sans-serif;
+  color: $base-text;
+  background: url('./../images/subtle_dots.png');
+}
+
+section {
+  min-height: 400px;
+  margin-bottom: 100px;
+  color: $base-text;
+  &.header {
+    min-height: 100vh;
+    padding-top: 10%;
+    // background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);
+    background-image: $gradient;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: ' ';
+      background: url('./../images/texture-shapes-bg.png');
+    }
+  }
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 10px 0;
+  color: $white;
+  background-color: #444;
+}

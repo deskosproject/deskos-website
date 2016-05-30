@@ -1,0 +1,47 @@
+@import './colors.scss';
+@import './animations.scss';
+
+#intro, #outro {
+  p {
+    font-size: 1.5em;
+    text-align: justify;
+  }
+}
+
+.hero-image {
+  top: 250px;
+  z-index: 0;
+  animation: fadeIn 1.5s ease, up 1.5s ease;
+}
+
+.card {
+  height: 400px;
+  padding: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+  color: $base-text;
+  text-align: justify;
+  background-color: rgba($white, .75);
+  border: 1px solid $primary;
+
+  i {
+    color: $primary;
+  }
+}
+
+.paper {
+  padding: 50px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: $base-text;
+  text-align: justify;
+  background-color: $white;
+}
+
+.screen-image {
+  padding: 5px;
+  margin-bottom: 30px;
+  text-align: justify;
+  background-color: $white;
+}
